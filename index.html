@@ -643,15 +643,21 @@
             }
 
             .summary-stat h3 {
-                font-size: clamp(1.5rem, 3vw, 2.5rem); /* Auto-scales between 1.5rem and 2.5rem */
+                font-size: clamp(1.25rem, 2.5vw, 2.5rem); /* Smaller range for better fit */
                 font-weight: 900;
                 margin-bottom: 0.5rem;
-                word-break: break-word; /* Allow breaking if really needed */
+                white-space: nowrap; /* Keep on one line */
+            }
+            
+            @media (max-width: 1200px) {
+                .summary-stat h3 {
+                    font-size: clamp(1rem, 2vw, 2rem);
+                }
             }
             
             @media (max-width: 768px) {
                 .summary-stat h3 {
-                    font-size: clamp(1.25rem, 4vw, 2rem);
+                    font-size: clamp(1rem, 3vw, 1.75rem);
                 }
             }
 
