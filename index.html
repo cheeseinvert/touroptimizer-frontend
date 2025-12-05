@@ -652,24 +652,27 @@
             .summary-stat {
                 text-align: center;
                 min-width: 0;
+                overflow: hidden; /* Prevent overflow */
             }
 
             .summary-stat h3 {
-                font-size: clamp(0.875rem, 2vw, 2.5rem); /* More aggressive scaling */
+                font-size: clamp(0.65rem, 1.8vw, 2.5rem); /* Much smaller minimum */
                 font-weight: 900;
                 margin-bottom: 0.5rem;
                 white-space: nowrap;
+                display: inline-block; /* Prevent clipping */
+                padding: 0 0.25rem; /* Small padding */
             }
             
             @media (max-width: 1200px) {
                 .summary-stat h3 {
-                    font-size: clamp(0.75rem, 1.8vw, 2rem);
+                    font-size: clamp(0.6rem, 1.5vw, 2rem);
                 }
             }
             
             @media (max-width: 768px) {
                 .summary-stat h3 {
-                    font-size: clamp(0.875rem, 2.5vw, 1.5rem);
+                    font-size: clamp(0.7rem, 2vw, 1.5rem);
                 }
             }
 
