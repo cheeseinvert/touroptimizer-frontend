@@ -634,6 +634,21 @@
                 margin-bottom: 2rem;
                 text-align: center;
             }
+            
+            @media (max-width: 768px) {
+                .summary-card {
+                    padding: 1.5rem 1rem;
+                    border-radius: 16px;
+                }
+                
+                .summary-card h2 {
+                    font-size: 1.5rem !important;
+                }
+                
+                .summary-card p {
+                    font-size: 0.875rem !important;
+                }
+            }
 
             .summary-stats {
                 display: grid;
@@ -645,7 +660,8 @@
             @media (max-width: 768px) {
                 .summary-stats {
                     grid-template-columns: repeat(2, 1fr);
-                    gap: 1.5rem;
+                    gap: 1rem;
+                    margin-top: 1.5rem;
                 }
             }
 
@@ -776,10 +792,42 @@
                 .tour-stop {
                     grid-template-columns: 1fr;
                     text-align: center;
+                    padding: 1.5rem;
+                    gap: 1rem;
+                }
+                
+                .stop-number {
+                    font-size: 1.5rem;
+                    width: auto;
+                    margin-bottom: 0.5rem;
+                }
+                
+                .stop-details h4 {
+                    font-size: 1.1rem;
+                }
+                
+                .stop-location {
+                    font-size: 0.8rem;
+                    margin-bottom: 1rem;
                 }
 
                 .stop-metrics {
                     justify-content: center;
+                    gap: 1rem;
+                    flex-wrap: wrap;
+                }
+                
+                .metric {
+                    min-width: 80px;
+                    flex: 0 0 auto;
+                }
+                
+                .metric-value {
+                    font-size: 1rem;
+                }
+                
+                .metric-label {
+                    font-size: 0.7rem;
                 }
             }
         </style>
