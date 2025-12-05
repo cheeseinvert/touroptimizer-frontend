@@ -826,8 +826,26 @@
             </div>
         </footer>
 
+        <!-- Vercel automatically injects git info via environment variables -->
+        <script>
+            // These will be replaced by Vercel at build time via env vars
+            window.VERCEL_GIT_COMMIT_SHA = '__VERCEL_GIT_COMMIT_SHA__';
+            window.VERCEL_GIT_COMMIT_REF = '__VERCEL_GIT_COMMIT_REF__';
+        </script>
+        
         <script type="text/babel">
             const { useState, useEffect } = React;
+
+            // Get git info from Vercel
+            const GIT_HASH = window.VERCEL_GIT_COMMIT_SHA?.substring(0, 7) || 'dev-mode';
+            const GIT_BRANCH = window.VERCEL_GIT_COMMIT_REF || 'main';
+            
+            // Log version info on page load
+            console.log('%c🚀 TourOptimizer', 'font-size: 20px; font-weight: bold; color: #FF3B5C;');
+            console.log(`%cGit Hash: ${GIT_HASH}`, 'color: #00D9A3; font-weight: bold; font-size: 14px;');
+            console.log(`%cBranch: ${GIT_BRANCH}`, 'color: #FFB800;');
+            console.log(`%cDeployed: ${new Date().toISOString()}`, 'color: #A8B2D1;');
+            console.log('%c─────────────────────────────────', 'color: #1F2542;');
 
             function App() {
                 const [page, setPage] = useState("landing");
