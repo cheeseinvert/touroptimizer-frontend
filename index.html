@@ -288,15 +288,17 @@
             }
 
             .stat-number {
-                font-size: clamp(1.25rem, 2.5vw, 2.5rem); /* More aggressive scaling */
+                font-size: clamp(1.25rem, 2.5vw, 2.5rem);
                 font-weight: 800;
                 font-family: "Syne", sans-serif;
                 background: var(--gradient-secondary);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 background-clip: text;
-                white-space: nowrap; /* Keep on one line */
-                padding: 0 0.5rem; /* Add padding to prevent edge cutoff */
+                white-space: nowrap;
+                padding: 0.25rem 0.75rem; /* More padding to prevent clipping */
+                display: inline-block; /* Prevents clipping */
+                line-height: 1.2; /* Tighter line height */
             }
 
             @media (max-width: 768px) {
