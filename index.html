@@ -284,10 +284,11 @@
                 border-radius: 16px;
                 border: 1px solid rgba(255, 255, 255, 0.1);
                 min-width: 0; /* Allow shrinking */
+                overflow: hidden; /* Prevent overflow */
             }
 
             .stat-number {
-                font-size: clamp(1.5rem, 3vw, 2.5rem); /* Auto-scale to fit */
+                font-size: clamp(1.25rem, 2.5vw, 2.5rem); /* More aggressive scaling */
                 font-weight: 800;
                 font-family: "Syne", sans-serif;
                 background: var(--gradient-secondary);
@@ -295,6 +296,13 @@
                 -webkit-text-fill-color: transparent;
                 background-clip: text;
                 white-space: nowrap; /* Keep on one line */
+                padding: 0 0.5rem; /* Add padding to prevent edge cutoff */
+            }
+
+            @media (max-width: 768px) {
+                .stat-number {
+                    font-size: clamp(1rem, 2vw, 2rem);
+                }
             }
 
             .stat-label {
