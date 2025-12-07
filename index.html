@@ -419,6 +419,7 @@
                 border: 1px solid rgba(255, 255, 255, 0.1);
                 position: relative;
                 transition: all 0.4s ease;
+                overflow: hidden; /* Prevent content overflow */
             }
 
             .pricing-card.featured {
@@ -458,10 +459,13 @@
             }
 
             .plan-price {
-                font-size: 3rem;
+                font-size: clamp(1.5rem, 4vw, 3rem); /* Scales down to fit */
                 font-weight: 900;
                 font-family: "Syne", sans-serif;
                 margin-bottom: 0.5rem;
+                white-space: nowrap; /* Keep on one line */
+                display: inline-block; /* Prevent clipping */
+                max-width: 100%; /* Don't exceed container */
             }
 
             .plan-price span {
