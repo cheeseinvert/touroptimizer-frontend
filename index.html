@@ -273,10 +273,20 @@
             /* Stats */
             .stats {
                 display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                grid-template-columns: repeat(2, 1fr); /* 2 columns = 2x2 grid */
                 gap: 2rem;
                 margin-top: 4rem;
                 padding: 0 2rem;
+                max-width: 800px; /* Limit width for better proportions */
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            @media (max-width: 768px) {
+                .stats {
+                    grid-template-columns: 1fr; /* Stack on mobile */
+                    max-width: 400px;
+                }
             }
 
             .stat-card {
@@ -793,9 +803,6 @@
                     font-size: 2.5rem;
                 }
 
-                .stats {
-                    grid-template-columns: 1fr;
-                }
 
                 .form-grid {
                     grid-template-columns: 1fr;
