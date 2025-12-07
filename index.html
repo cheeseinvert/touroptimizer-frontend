@@ -237,14 +237,16 @@
             .hero-content {
                 max-width: 900px;
                 animation: fadeInUp 1s ease-out;
+                overflow: visible; /* Prevent text clipping */
             }
 
             .hero h1 {
                 font-size: clamp(2.5rem, 8vw, 5rem);
-                line-height: 1.1;
+                line-height: 1.2; /* Increased from 1.1 to prevent clipping */
                 margin-bottom: 1.5rem;
                 font-weight: 900;
                 letter-spacing: -0.03em;
+                padding-bottom: 0.1em; /* Small padding to prevent descender clipping */
             }
 
             .gradient-text {
