@@ -697,24 +697,24 @@
             }
 
             .summary-stat h3 {
-                font-size: clamp(1.25rem, 2.5vw, 3.5rem); /* Much bigger on desktop */
+                font-size: clamp(1rem, 4vw, 4rem); /* Start bigger, scale more */
                 font-weight: 900;
                 margin-bottom: 0.5rem;
                 white-space: nowrap;
                 display: inline-block;
                 padding: 0 0.5rem;
-                max-width: 100%; /* Never exceed container */
+                max-width: 100%;
             }
             
             @media (max-width: 1200px) {
                 .summary-stat h3 {
-                    font-size: clamp(1rem, 2vw, 2.5rem); /* Scale down on smaller screens */
+                    font-size: clamp(0.9rem, 3.5vw, 3rem); /* Smaller min for tight screens */
                 }
             }
             
             @media (max-width: 768px) {
                 .summary-stat h3 {
-                    font-size: clamp(1.5rem, 6vw, 3rem) !important; /* MUCH bigger on mobile */
+                    font-size: clamp(0.8rem, 8vw, 3.5rem) !important; /* Much more aggressive scaling */
                 }
             }
 
