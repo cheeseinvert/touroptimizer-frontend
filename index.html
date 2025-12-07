@@ -285,7 +285,8 @@
             @media (max-width: 768px) {
                 .stats {
                     grid-template-columns: 1fr; /* Stack on mobile */
-                    max-width: 400px;
+                    max-width: 500px; /* Wider on mobile */
+                    gap: 1.5rem;
                 }
             }
 
@@ -314,8 +315,16 @@
             }
 
             @media (max-width: 768px) {
+                .stat-card {
+                    padding: 2.5rem 2rem; /* More padding on mobile */
+                }
+                
                 .stat-number {
-                    font-size: clamp(1rem, 2vw, 2rem);
+                    font-size: clamp(2rem, 8vw, 3rem) !important; /* Much bigger on mobile */
+                }
+                
+                .stat-label {
+                    font-size: 1rem; /* Bigger labels too */
                 }
             }
 
