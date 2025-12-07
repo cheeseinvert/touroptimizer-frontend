@@ -693,41 +693,45 @@
             .summary-stat {
                 text-align: center;
                 min-width: 0;
-                overflow: hidden;
-                padding: 0.5rem;
+                overflow: visible;
+                padding: 0.25rem;
             }
 
             .summary-stat h3 {
-                font-size: 2rem; /* Fixed size on desktop */
+                font-size: 2.5rem; /* Start big */
                 font-weight: 900;
                 margin-bottom: 0.5rem;
                 white-space: nowrap;
-                overflow: hidden;
-                text-overflow: clip;
-                transform: scale(1);
-                transform-origin: center;
+                display: inline-block;
+                max-width: 100%;
+                transform-origin: center center;
             }
             
-            /* Scale down text if it's too wide using CSS transform */
             @media (max-width: 1400px) {
                 .summary-stat h3 {
-                    font-size: 1.75rem;
+                    font-size: 2rem;
                 }
             }
             
             @media (max-width: 1200px) {
                 .summary-stat h3 {
-                    font-size: 1.5rem;
+                    font-size: 1.75rem;
                 }
             }
             
             @media (max-width: 900px) {
                 .summary-stat h3 {
-                    font-size: 1.25rem;
+                    font-size: 1.5rem;
                 }
             }
             
             @media (max-width: 768px) {
+                .summary-stat h3 {
+                    font-size: 2rem !important;
+                }
+            }
+            
+            @media (max-width: 600px) {
                 .summary-stat h3 {
                     font-size: 1.75rem !important;
                 }
@@ -742,6 +746,12 @@
             @media (max-width: 400px) {
                 .summary-stat h3 {
                     font-size: 1.25rem !important;
+                }
+            }
+            
+            @media (max-width: 350px) {
+                .summary-stat h3 {
+                    font-size: 1.1rem !important;
                 }
             }
 
