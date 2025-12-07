@@ -662,7 +662,7 @@
             
             @media (max-width: 768px) {
                 .summary-card {
-                    padding: 1.5rem 1rem;
+                    padding: 2rem 1.5rem; /* More padding for bigger stats */
                     border-radius: 16px;
                 }
                 
@@ -697,7 +697,7 @@
             }
 
             .summary-stat h3 {
-                font-size: clamp(0.5rem, 1.2vw, 2.5rem); /* Even more aggressive */
+                font-size: clamp(0.5rem, 1.2vw, 2.5rem);
                 font-weight: 900;
                 margin-bottom: 0.5rem;
                 white-space: nowrap;
@@ -707,13 +707,13 @@
             
             @media (max-width: 1200px) {
                 .summary-stat h3 {
-                    font-size: clamp(0.5rem, 1vw, 2rem); /* More aggressive */
+                    font-size: clamp(0.5rem, 1vw, 2rem);
                 }
             }
             
             @media (max-width: 768px) {
                 .summary-stat h3 {
-                    font-size: clamp(0.5rem, 1.3vw, 1.5rem); /* Much smaller */
+                    font-size: clamp(1.5rem, 6vw, 3rem) !important; /* MUCH bigger on mobile */
                 }
             }
 
@@ -724,7 +724,7 @@
             
             @media (max-width: 768px) {
                 .summary-stat p {
-                    font-size: 0.75rem;
+                    font-size: 0.875rem; /* Keep labels readable */
                 }
             }
 
