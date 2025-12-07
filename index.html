@@ -654,7 +654,7 @@
 
             .summary-card {
                 background: var(--gradient-primary);
-                padding: 2.5rem;
+                padding: 3rem 2rem; /* More padding for bigger stats */
                 border-radius: 20px;
                 margin-bottom: 2rem;
                 text-align: center;
@@ -678,14 +678,14 @@
             .summary-stats {
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
-                gap: 2rem;
+                gap: 2.5rem; /* More gap for bigger numbers */
                 margin-top: 2rem;
             }
             
             @media (max-width: 768px) {
                 .summary-stats {
                     grid-template-columns: repeat(2, 1fr);
-                    gap: 1rem;
+                    gap: 1.5rem; /* More gap on mobile too */
                     margin-top: 1.5rem;
                 }
             }
@@ -697,17 +697,18 @@
             }
 
             .summary-stat h3 {
-                font-size: clamp(0.5rem, 1.2vw, 2.5rem);
+                font-size: clamp(1.25rem, 2.5vw, 3.5rem); /* Much bigger on desktop */
                 font-weight: 900;
                 margin-bottom: 0.5rem;
                 white-space: nowrap;
                 display: inline-block;
-                padding: 0 0.25rem;
+                padding: 0 0.5rem;
+                max-width: 100%; /* Never exceed container */
             }
             
             @media (max-width: 1200px) {
                 .summary-stat h3 {
-                    font-size: clamp(0.5rem, 1vw, 2rem);
+                    font-size: clamp(1rem, 2vw, 2.5rem); /* Scale down on smaller screens */
                 }
             }
             
