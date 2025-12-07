@@ -694,30 +694,27 @@
                 text-align: center;
                 min-width: 0;
                 overflow: hidden;
-                position: relative; /* For container queries */
-                container-type: inline-size; /* Enable container queries */
             }
 
             .summary-stat h3 {
-                font-size: 8cqw; /* 8% of container width - auto-fits! */
+                font-size: clamp(0.6rem, 3vw, 3rem); /* Small min, big max */
                 font-weight: 900;
                 margin-bottom: 0.5rem;
                 white-space: nowrap;
                 display: inline-block;
-                padding: 0 0.5rem;
+                padding: 0 0.25rem;
                 max-width: 100%;
             }
             
-            /* Fallback for browsers without container query support */
-            @supports not (font-size: 1cqw) {
+            @media (min-width: 1400px) {
                 .summary-stat h3 {
-                    font-size: clamp(0.75rem, 3vw, 2.5rem);
+                    font-size: clamp(0.8rem, 2.5vw, 4rem); /* Even bigger on large screens */
                 }
-                
-                @media (max-width: 768px) {
-                    .summary-stat h3 {
-                        font-size: clamp(1rem, 5vw, 2rem) !important;
-                    }
+            }
+            
+            @media (max-width: 768px) {
+                .summary-stat h3 {
+                    font-size: clamp(1.2rem, 5vw, 2.5rem) !important; /* Bigger minimum on mobile */
                 }
             }
 
