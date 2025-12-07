@@ -684,7 +684,7 @@
             
             @media (max-width: 768px) {
                 .summary-stats {
-                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-columns: 1fr; /* Single column on mobile */
                     gap: 1rem;
                     margin-top: 1.5rem;
                 }
@@ -698,7 +698,7 @@
             }
 
             .summary-stat h3 {
-                font-size: 1.5rem; /* Smaller to fit all numbers */
+                font-size: 1.25rem; /* Smaller to ensure fit */
                 font-weight: 900;
                 margin-bottom: 0.5rem;
                 white-space: nowrap;
@@ -709,49 +709,49 @@
             
             @media (max-width: 1400px) {
                 .summary-stat h3 {
-                    font-size: 1.35rem;
+                    font-size: 1.15rem;
                 }
             }
             
             @media (max-width: 1200px) {
                 .summary-stat h3 {
-                    font-size: 1.25rem;
+                    font-size: 1.1rem;
                 }
             }
             
             @media (max-width: 900px) {
                 .summary-stat h3 {
-                    font-size: 1.1rem;
+                    font-size: 1rem;
                 }
             }
             
             @media (max-width: 768px) {
                 .summary-stat h3 {
-                    font-size: 2rem !important; /* Bigger on mobile */
+                    font-size: 3rem !important; /* Much bigger with full width */
                 }
             }
             
             @media (max-width: 600px) {
                 .summary-stat h3 {
-                    font-size: 1.75rem !important;
+                    font-size: 2.5rem !important;
                 }
             }
             
             @media (max-width: 500px) {
                 .summary-stat h3 {
-                    font-size: 1.5rem !important;
+                    font-size: 2.25rem !important;
                 }
             }
             
             @media (max-width: 400px) {
                 .summary-stat h3 {
-                    font-size: 1.25rem !important;
+                    font-size: 2rem !important;
                 }
             }
             
             @media (max-width: 350px) {
                 .summary-stat h3 {
-                    font-size: 1.1rem !important;
+                    font-size: 1.75rem !important;
                 }
             }
 
