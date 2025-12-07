@@ -693,11 +693,13 @@
             .summary-stat {
                 text-align: center;
                 min-width: 0;
-                overflow: hidden; /* Prevent overflow */
+                overflow: hidden;
+                position: relative; /* For container queries */
+                container-type: inline-size; /* Enable container queries */
             }
 
             .summary-stat h3 {
-                font-size: clamp(1rem, 4vw, 4rem); /* Start bigger, scale more */
+                font-size: 8cqw; /* 8% of container width - auto-fits! */
                 font-weight: 900;
                 margin-bottom: 0.5rem;
                 white-space: nowrap;
@@ -706,15 +708,16 @@
                 max-width: 100%;
             }
             
-            @media (max-width: 1200px) {
+            /* Fallback for browsers without container query support */
+            @supports not (font-size: 1cqw) {
                 .summary-stat h3 {
-                    font-size: clamp(0.9rem, 3.5vw, 3rem); /* Smaller min for tight screens */
+                    font-size: clamp(0.75rem, 3vw, 2.5rem);
                 }
-            }
-            
-            @media (max-width: 768px) {
-                .summary-stat h3 {
-                    font-size: clamp(0.8rem, 8vw, 3.5rem) !important; /* Much more aggressive scaling */
+                
+                @media (max-width: 768px) {
+                    .summary-stat h3 {
+                        font-size: clamp(1rem, 5vw, 2rem) !important;
+                    }
                 }
             }
 
